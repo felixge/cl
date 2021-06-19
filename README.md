@@ -1,6 +1,6 @@
 # cl
 
-`cl` clones git repositories into nested directories similar to `go get` and outputs the path of the cloned directory. Example:
+`cl` clones git repositories into nested folders like [GOPATH](https://golang.org/doc/gopath_code#Workspaces) and outputs the path of the cloned directory. Example:
 
 ```
 # clone to /Users/bob/src/github.com/awesome-streamers/awesome-streamerrc
