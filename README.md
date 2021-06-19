@@ -3,8 +3,8 @@
 `cl` clones git repositories into nested folders like [GOPATH](https://golang.org/doc/gopath_code#Workspaces) and outputs the path of the cloned directory. Example:
 
 ```
-# clone to /Users/bob/src/github.com/awesome-streamers/awesome-streamerrc
-cl -dir ~/src https://github.com/awesome-streamers/awesome-streamerrc
+# clone to /Users/bob/src/github.com/example-org/example-repo
+cl -dir ~/src https://github.com/example-org/example-repo
 ```
 
 You can install `cl` as a [binary release](https://github.com/felixge/cl/releases) or using Go:
@@ -25,9 +25,9 @@ cl() {
 After that any of the following commands can be used to clone a repo and change into its directory:
 
 ```
-cl https://github.com/awesome-streamers/awesome-streamerrc.git
-cl https://github.com/awesome-streamers/awesome-streamerrc
-cl git@github.com:awesome-streamers/awesome-streamerrc.git
+cl https://github.com/example-org/example-repo.git
+cl https://github.com/example-org/example-repo
+cl git@github.com:example-org/example-repo.git
 ```
 
 # License
