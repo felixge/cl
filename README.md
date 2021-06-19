@@ -25,8 +25,8 @@ In order for the example above to work, you'll need to configure a bash function
 
 ```
 cl() {
-  path=$(command cl -dir "$GOPATH/src" "$1")
-  cd "$path"
+  cloned=$(command cl -dir "$GOPATH/src" "$1")
+  cd "$cloned"
 }
 ```
 
