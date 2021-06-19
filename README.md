@@ -10,9 +10,8 @@ cl https://github.com/foo/bar
 Is roughly equivalent to:
 
 ```
-mkdir -p ~/src/github.com/foo/bar
+git clone https://github.com/foo/bar ~/src/github.com/foo/bar
 cd ~/src/github.com/foo/bar
-git clone https://github.com/foo/bar .
 ```
 
 You can install `cl` as a [binary release](https://github.com/felixge/cl/releases) or using Go:
