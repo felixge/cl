@@ -37,7 +37,7 @@ cl https://github.com/foo/bar
 cl git@github.com:foo/bar.git
 ```
 
-Without the bash function, you'll have to use a slightly more verbose command:
+Without the bash function, you would have to use a slightly more verbose command:
 
 ```
 cd $(cl -dir ~/src https://github.com/foo/bar)
