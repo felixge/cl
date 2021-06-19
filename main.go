@@ -24,19 +24,19 @@ func run() error {
 	flag.Parse()
 
 	cloneURL := flag.Arg(0)
-	relPath, err := ExtractPath(cloneURL)
+	relCloneDir, err := ExtractPath(cloneURL)
 	if err != nil {
 		return err
 	}
-	absPath := filepath.Join(*dirF, relPath)
-	absPathDir := filepath.Dir(absPath)
-	if _, err := os.Stat(absPath); os.IsNotExist(err) {
-		if err := os.MkdirAll(absPathDir, 0755); err != nil {
+	cloneDir := filepath.Join(*dirF, relCloneDir)
+	parentDir := filepath.Dir(cloneDir)
+	if _, err := os.Stat(cloneDir); os.IsNotExist(err) {
+		if err := os.MkdirAll(parentDir, 0755); err != nil {
 			return err
 		}
 
 		cmd := exec.Command("git", "clone", cloneURL)
-		cmd.Dir = absPathDir
+		cmd.Dir = parentDir
 		cmd.Stdin = os.Stdin
 		cmd.Stdout = os.Stdout
 		cmd.Stderr = os.Stderr
@@ -44,7 +44,7 @@ func run() error {
 			return err
 		}
 	}
-	fmt.Println(absPath)
+	fmt.Println(cloneDir)
 	return nil
 }
 
